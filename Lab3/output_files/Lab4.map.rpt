@@ -1,0 +1,702 @@
+Analysis & Synthesis report for Lab4
+Wed Sep 20 23:23:01 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component
+ 12. Parameter Settings for User Entity Instance: two_digit_bcd_v2:ms_bcd|bcd:digit1
+ 13. Parameter Settings for User Entity Instance: two_digit_bcd_v2:ms_bcd|bcd:digit2
+ 14. Parameter Settings for User Entity Instance: two_digit_bcd_v2:sec_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component
+ 15. Parameter Settings for User Entity Instance: two_digit_bcd_v2:sec_bcd|bcd:digit1
+ 16. Parameter Settings for User Entity Instance: two_digit_bcd_v2:sec_bcd|bcd:digit2
+ 17. Parameter Settings for User Entity Instance: two_digit_bcd_v2:min_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component
+ 18. Parameter Settings for User Entity Instance: two_digit_bcd_v2:min_bcd|bcd:digit1
+ 19. Parameter Settings for User Entity Instance: two_digit_bcd_v2:min_bcd|bcd:digit2
+ 20. Port Connectivity Checks: "two_digit_bcd_v2:ms_bcd|bcd:digit2"
+ 21. Port Connectivity Checks: "two_digit_bcd_v2:ms_bcd|bcd:digit1"
+ 22. Port Connectivity Checks: "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Sep 20 23:23:01 2023       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Lab4                                        ;
+; Top-level Entity Name              ; stopwatch                                   ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 253                                         ;
+;     Total combinational functions  ; 253                                         ;
+;     Dedicated logic registers      ; 61                                          ;
+; Total registers                    ; 61                                          ;
+; Total pins                         ; 45                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; stopwatch          ; Lab4               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; stopwatch.v                      ; yes             ; User Verilog HDL File        ; C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v                                 ;         ;
+; divide_7bit.v                    ; yes             ; User Wizard-Generated File   ; C:/intelFPGA_lite/ECE2072/Lab4/divide_7bit.v                               ;         ;
+; bcd.v                            ; yes             ; User Verilog HDL File        ; C:/intelFPGA_lite/ECE2072/Lab4/bcd.v                                       ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
+; db/lpm_divide_m0s.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA_lite/ECE2072/Lab4/db/lpm_divide_m0s.tdf                       ;         ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA_lite/ECE2072/Lab4/db/sign_div_unsign_dkh.tdf                  ;         ;
+; db/alt_u_div_4fe.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA_lite/ECE2072/Lab4/db/alt_u_div_4fe.tdf                        ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA_lite/ECE2072/Lab4/db/add_sub_t3c.tdf                          ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA_lite/ECE2072/Lab4/db/add_sub_u3c.tdf                          ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 253            ;
+;                                             ;                ;
+; Total combinational functions               ; 253            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 86             ;
+;     -- 3 input functions                    ; 63             ;
+;     -- <=2 input functions                  ; 104            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 159            ;
+;     -- arithmetic mode                      ; 94             ;
+;                                             ;                ;
+; Total registers                             ; 61             ;
+;     -- Dedicated logic registers            ; 61             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 45             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 50             ;
+; Total fan-out                               ; 966            ;
+; Average fan-out                             ; 2.39           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                 ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                        ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |stopwatch                                   ; 253 (111)           ; 61 (61)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 45   ; 0            ; 0          ; |stopwatch                                                                                                                                                                 ; stopwatch           ; work         ;
+;    |two_digit_bcd_v2:min_bcd|                ; 47 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd                                                                                                                                        ; two_digit_bcd_v2    ; work         ;
+;       |bcd:digit1|                           ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd|bcd:digit1                                                                                                                             ; bcd                 ; work         ;
+;       |bcd:digit2|                           ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd|bcd:digit2                                                                                                                             ; bcd                 ; work         ;
+;       |divide_7bit:bcd_divide|               ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd|divide_7bit:bcd_divide                                                                                                                 ; divide_7bit         ; work         ;
+;          |lpm_divide:LPM_DIVIDE_component|   ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_m0s:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated                                                   ; lpm_divide_m0s      ; work         ;
+;                |sign_div_unsign_dkh:divider| ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
+;                   |alt_u_div_4fe:divider|    ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:min_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_4fe:divider ; alt_u_div_4fe       ; work         ;
+;    |two_digit_bcd_v2:ms_bcd|                 ; 47 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd                                                                                                                                         ; two_digit_bcd_v2    ; work         ;
+;       |bcd:digit1|                           ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd|bcd:digit1                                                                                                                              ; bcd                 ; work         ;
+;       |bcd:digit2|                           ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd|bcd:digit2                                                                                                                              ; bcd                 ; work         ;
+;       |divide_7bit:bcd_divide|               ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide                                                                                                                  ; divide_7bit         ; work         ;
+;          |lpm_divide:LPM_DIVIDE_component|   ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component                                                                                  ; lpm_divide          ; work         ;
+;             |lpm_divide_m0s:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated                                                    ; lpm_divide_m0s      ; work         ;
+;                |sign_div_unsign_dkh:divider| ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider                        ; sign_div_unsign_dkh ; work         ;
+;                   |alt_u_div_4fe:divider|    ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_4fe:divider  ; alt_u_div_4fe       ; work         ;
+;    |two_digit_bcd_v2:sec_bcd|                ; 48 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd                                                                                                                                        ; two_digit_bcd_v2    ; work         ;
+;       |bcd:digit1|                           ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd|bcd:digit1                                                                                                                             ; bcd                 ; work         ;
+;       |bcd:digit2|                           ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd|bcd:digit2                                                                                                                             ; bcd                 ; work         ;
+;       |divide_7bit:bcd_divide|               ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd|divide_7bit:bcd_divide                                                                                                                 ; divide_7bit         ; work         ;
+;          |lpm_divide:LPM_DIVIDE_component|   ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_m0s:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated                                                   ; lpm_divide_m0s      ; work         ;
+;                |sign_div_unsign_dkh:divider| ; 24 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
+;                   |alt_u_div_4fe:divider|    ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|two_digit_bcd_v2:sec_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_4fe:divider ; alt_u_div_4fe       ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                     ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                      ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+; two_digit_bcd_v2:ms_bcd|bcd:digit2|hmmm[0]          ; two_digit_bcd_v2:ms_bcd|bcd:digit2|Mux0  ; yes                    ;
+; two_digit_bcd_v2:ms_bcd|bcd:digit2|hmmm[1]          ; two_digit_bcd_v2:ms_bcd|bcd:digit2|Mux0  ; yes                    ;
+; two_digit_bcd_v2:ms_bcd|bcd:digit2|hmmm[2]          ; two_digit_bcd_v2:ms_bcd|bcd:digit2|Mux0  ; yes                    ;
+; two_digit_bcd_v2:ms_bcd|bcd:digit1|hmmm[0]          ; two_digit_bcd_v2:ms_bcd|bcd:digit1|Mux0  ; yes                    ;
+; two_digit_bcd_v2:ms_bcd|bcd:digit1|hmmm[1]          ; two_digit_bcd_v2:ms_bcd|bcd:digit1|Mux0  ; yes                    ;
+; two_digit_bcd_v2:ms_bcd|bcd:digit1|hmmm[2]          ; two_digit_bcd_v2:ms_bcd|bcd:digit1|Mux0  ; yes                    ;
+; two_digit_bcd_v2:sec_bcd|bcd:digit2|hmmm[0]         ; two_digit_bcd_v2:sec_bcd|bcd:digit2|Mux0 ; yes                    ;
+; two_digit_bcd_v2:sec_bcd|bcd:digit2|hmmm[1]         ; two_digit_bcd_v2:sec_bcd|bcd:digit2|Mux0 ; yes                    ;
+; two_digit_bcd_v2:sec_bcd|bcd:digit2|hmmm[2]         ; two_digit_bcd_v2:sec_bcd|bcd:digit2|Mux0 ; yes                    ;
+; two_digit_bcd_v2:sec_bcd|bcd:digit1|hmmm[0]         ; two_digit_bcd_v2:sec_bcd|bcd:digit1|Mux0 ; yes                    ;
+; two_digit_bcd_v2:sec_bcd|bcd:digit1|hmmm[1]         ; two_digit_bcd_v2:sec_bcd|bcd:digit1|Mux0 ; yes                    ;
+; two_digit_bcd_v2:sec_bcd|bcd:digit1|hmmm[2]         ; two_digit_bcd_v2:sec_bcd|bcd:digit1|Mux0 ; yes                    ;
+; two_digit_bcd_v2:min_bcd|bcd:digit2|hmmm[0]         ; two_digit_bcd_v2:min_bcd|bcd:digit2|Mux0 ; yes                    ;
+; two_digit_bcd_v2:min_bcd|bcd:digit2|hmmm[1]         ; two_digit_bcd_v2:min_bcd|bcd:digit2|Mux0 ; yes                    ;
+; two_digit_bcd_v2:min_bcd|bcd:digit2|hmmm[2]         ; two_digit_bcd_v2:min_bcd|bcd:digit2|Mux0 ; yes                    ;
+; two_digit_bcd_v2:min_bcd|bcd:digit1|hmmm[0]         ; two_digit_bcd_v2:min_bcd|bcd:digit1|Mux0 ; yes                    ;
+; two_digit_bcd_v2:min_bcd|bcd:digit1|hmmm[1]         ; two_digit_bcd_v2:min_bcd|bcd:digit1|Mux0 ; yes                    ;
+; two_digit_bcd_v2:min_bcd|bcd:digit1|hmmm[2]         ; two_digit_bcd_v2:min_bcd|bcd:digit1|Mux0 ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                                          ;                        ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 61    ;
+; Number of registers using Synchronous Clear  ; 19    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |stopwatch|ms_counter[2]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |stopwatch|sec_counter[1]  ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |stopwatch|min_counter[1]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+-----------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                              ;
++------------------------+----------------+-----------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Signed Integer                                                                    ;
+; LPM_WIDTHD             ; 7              ; Signed Integer                                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                           ;
+; CBXI_PARAMETER         ; lpm_divide_m0s ; Untyped                                                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                    ;
++------------------------+----------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:ms_bcd|bcd:digit1 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; a              ; 0011  ; Unsigned Binary                                        ;
+; b              ; 0010  ; Unsigned Binary                                        ;
+; c              ; 0001  ; Unsigned Binary                                        ;
+; d              ; 0100  ; Unsigned Binary                                        ;
+; e              ; 010   ; Unsigned Binary                                        ;
+; f              ; 011   ; Unsigned Binary                                        ;
+; g              ; 100   ; Unsigned Binary                                        ;
+; h              ; 101   ; Unsigned Binary                                        ;
+; i              ; 110   ; Unsigned Binary                                        ;
+; j              ; 111   ; Unsigned Binary                                        ;
+; k              ; 001   ; Unsigned Binary                                        ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:ms_bcd|bcd:digit2 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; a              ; 0011  ; Unsigned Binary                                        ;
+; b              ; 0010  ; Unsigned Binary                                        ;
+; c              ; 0001  ; Unsigned Binary                                        ;
+; d              ; 0100  ; Unsigned Binary                                        ;
+; e              ; 010   ; Unsigned Binary                                        ;
+; f              ; 011   ; Unsigned Binary                                        ;
+; g              ; 100   ; Unsigned Binary                                        ;
+; h              ; 101   ; Unsigned Binary                                        ;
+; i              ; 110   ; Unsigned Binary                                        ;
+; j              ; 111   ; Unsigned Binary                                        ;
+; k              ; 001   ; Unsigned Binary                                        ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:sec_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                               ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Signed Integer                                                                     ;
+; LPM_WIDTHD             ; 7              ; Signed Integer                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                            ;
+; CBXI_PARAMETER         ; lpm_divide_m0s ; Untyped                                                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                     ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:sec_bcd|bcd:digit1 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; a              ; 0011  ; Unsigned Binary                                         ;
+; b              ; 0010  ; Unsigned Binary                                         ;
+; c              ; 0001  ; Unsigned Binary                                         ;
+; d              ; 0100  ; Unsigned Binary                                         ;
+; e              ; 010   ; Unsigned Binary                                         ;
+; f              ; 011   ; Unsigned Binary                                         ;
+; g              ; 100   ; Unsigned Binary                                         ;
+; h              ; 101   ; Unsigned Binary                                         ;
+; i              ; 110   ; Unsigned Binary                                         ;
+; j              ; 111   ; Unsigned Binary                                         ;
+; k              ; 001   ; Unsigned Binary                                         ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:sec_bcd|bcd:digit2 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; a              ; 0011  ; Unsigned Binary                                         ;
+; b              ; 0010  ; Unsigned Binary                                         ;
+; c              ; 0001  ; Unsigned Binary                                         ;
+; d              ; 0100  ; Unsigned Binary                                         ;
+; e              ; 010   ; Unsigned Binary                                         ;
+; f              ; 011   ; Unsigned Binary                                         ;
+; g              ; 100   ; Unsigned Binary                                         ;
+; h              ; 101   ; Unsigned Binary                                         ;
+; i              ; 110   ; Unsigned Binary                                         ;
+; j              ; 111   ; Unsigned Binary                                         ;
+; k              ; 001   ; Unsigned Binary                                         ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:min_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                               ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Signed Integer                                                                     ;
+; LPM_WIDTHD             ; 7              ; Signed Integer                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                            ;
+; CBXI_PARAMETER         ; lpm_divide_m0s ; Untyped                                                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                     ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:min_bcd|bcd:digit1 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; a              ; 0011  ; Unsigned Binary                                         ;
+; b              ; 0010  ; Unsigned Binary                                         ;
+; c              ; 0001  ; Unsigned Binary                                         ;
+; d              ; 0100  ; Unsigned Binary                                         ;
+; e              ; 010   ; Unsigned Binary                                         ;
+; f              ; 011   ; Unsigned Binary                                         ;
+; g              ; 100   ; Unsigned Binary                                         ;
+; h              ; 101   ; Unsigned Binary                                         ;
+; i              ; 110   ; Unsigned Binary                                         ;
+; j              ; 111   ; Unsigned Binary                                         ;
+; k              ; 001   ; Unsigned Binary                                         ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: two_digit_bcd_v2:min_bcd|bcd:digit2 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; a              ; 0011  ; Unsigned Binary                                         ;
+; b              ; 0010  ; Unsigned Binary                                         ;
+; c              ; 0001  ; Unsigned Binary                                         ;
+; d              ; 0100  ; Unsigned Binary                                         ;
+; e              ; 010   ; Unsigned Binary                                         ;
+; f              ; 011   ; Unsigned Binary                                         ;
+; g              ; 100   ; Unsigned Binary                                         ;
+; h              ; 101   ; Unsigned Binary                                         ;
+; i              ; 110   ; Unsigned Binary                                         ;
+; j              ; 111   ; Unsigned Binary                                         ;
+; k              ; 001   ; Unsigned Binary                                         ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "two_digit_bcd_v2:ms_bcd|bcd:digit2"                                                                                                                                             ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in   ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "two_digit_bcd_v2:ms_bcd|bcd:digit1"                                                                                                                                             ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in   ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide"                                               ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; denom[6..4]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; denom[3]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; denom[2]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; denom[1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; denom[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; quotient[6..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; remain[6..4]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 45                          ;
+; cycloneiii_ff         ; 61                          ;
+;     ENA               ; 20                          ;
+;     SCLR              ; 19                          ;
+;     plain             ; 22                          ;
+; cycloneiii_lcell_comb ; 277                         ;
+;     arith             ; 94                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 73                          ;
+;         3 data inputs ; 18                          ;
+;     normal            ; 183                         ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 32                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 45                          ;
+;         4 data inputs ; 86                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.80                        ;
+; Average LUT depth     ; 4.98                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Sep 20 23:22:49 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file stopwatch.v
+    Info (12023): Found entity 1: stopwatch File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 1
+    Info (12023): Found entity 2: two_digit_bcd_v2 File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 90
+Warning (10261): Verilog HDL Event Control warning at shift_reg.v(9): Event Control contains a complex event expression File: C:/intelFPGA_lite/ECE2072/Lab4/shift_reg.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file shift_reg.v
+    Info (12023): Found entity 1: shift_reg File: C:/intelFPGA_lite/ECE2072/Lab4/shift_reg.v Line: 1
+Warning (10261): Verilog HDL Event Control warning at lfsr.v(10): Event Control contains a complex event expression File: C:/intelFPGA_lite/ECE2072/Lab4/lfsr.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file lfsr.v
+    Info (12023): Found entity 1: lfsr File: C:/intelFPGA_lite/ECE2072/Lab4/lfsr.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divide_7bit.v
+    Info (12023): Found entity 1: divide_7bit File: C:/intelFPGA_lite/ECE2072/Lab4/divide_7bit.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file clock_100.v
+    Info (12023): Found entity 1: clock_100 File: C:/intelFPGA_lite/ECE2072/Lab4/clock_100.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock_10.v
+    Info (12023): Found entity 1: clock_10 File: C:/intelFPGA_lite/ECE2072/Lab4/clock_10.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
+    Info (12023): Found entity 1: bcd File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 1
+Info (12127): Elaborating entity "stopwatch" for the top level hierarchy
+Info (12128): Elaborating entity "two_digit_bcd_v2" for hierarchy "two_digit_bcd_v2:ms_bcd" File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 83
+Info (12128): Elaborating entity "divide_7bit" for hierarchy "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide" File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 104
+Info (12128): Elaborating entity "lpm_divide" for hierarchy "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component" File: C:/intelFPGA_lite/ECE2072/Lab4/divide_7bit.v Line: 62
+Info (12130): Elaborated megafunction instantiation "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component" File: C:/intelFPGA_lite/ECE2072/Lab4/divide_7bit.v Line: 62
+Info (12133): Instantiated megafunction "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component" with the following parameter: File: C:/intelFPGA_lite/ECE2072/Lab4/divide_7bit.v Line: 62
+    Info (12134): Parameter "lpm_drepresentation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_hint" = "LPM_REMAINDERPOSITIVE=TRUE"
+    Info (12134): Parameter "lpm_nrepresentation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_DIVIDE"
+    Info (12134): Parameter "lpm_widthd" = "7"
+    Info (12134): Parameter "lpm_widthn" = "7"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m0s.tdf
+    Info (12023): Found entity 1: lpm_divide_m0s File: C:/intelFPGA_lite/ECE2072/Lab4/db/lpm_divide_m0s.tdf Line: 24
+Info (12128): Elaborating entity "lpm_divide_m0s" for hierarchy "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf Line: 147
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: C:/intelFPGA_lite/ECE2072/Lab4/db/sign_div_unsign_dkh.tdf Line: 24
+Info (12128): Elaborating entity "sign_div_unsign_dkh" for hierarchy "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider" File: C:/intelFPGA_lite/ECE2072/Lab4/db/lpm_divide_m0s.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_4fe.tdf
+    Info (12023): Found entity 1: alt_u_div_4fe File: C:/intelFPGA_lite/ECE2072/Lab4/db/alt_u_div_4fe.tdf Line: 26
+Info (12128): Elaborating entity "alt_u_div_4fe" for hierarchy "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_4fe:divider" File: C:/intelFPGA_lite/ECE2072/Lab4/db/sign_div_unsign_dkh.tdf Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: C:/intelFPGA_lite/ECE2072/Lab4/db/add_sub_t3c.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_t3c" for hierarchy "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_4fe:divider|add_sub_t3c:add_sub_0" File: C:/intelFPGA_lite/ECE2072/Lab4/db/alt_u_div_4fe.tdf Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: C:/intelFPGA_lite/ECE2072/Lab4/db/add_sub_u3c.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_u3c" for hierarchy "two_digit_bcd_v2:ms_bcd|divide_7bit:bcd_divide|lpm_divide:LPM_DIVIDE_component|lpm_divide_m0s:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_4fe:divider|add_sub_u3c:add_sub_1" File: C:/intelFPGA_lite/ECE2072/Lab4/db/alt_u_div_4fe.tdf Line: 35
+Info (12128): Elaborating entity "bcd" for hierarchy "two_digit_bcd_v2:ms_bcd|bcd:digit1" File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 106
+Warning (10230): Verilog HDL assignment warning at bcd.v(7): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 7
+Warning (10230): Verilog HDL assignment warning at bcd.v(8): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 8
+Warning (10230): Verilog HDL assignment warning at bcd.v(9): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 9
+Warning (10230): Verilog HDL assignment warning at bcd.v(10): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 10
+Warning (10230): Verilog HDL assignment warning at bcd.v(18): truncated value with size 4 to match size of target (3) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 18
+Warning (10230): Verilog HDL assignment warning at bcd.v(19): truncated value with size 4 to match size of target (3) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 19
+Warning (10230): Verilog HDL assignment warning at bcd.v(22): truncated value with size 4 to match size of target (3) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 22
+Warning (10230): Verilog HDL assignment warning at bcd.v(24): truncated value with size 4 to match size of target (3) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 24
+Warning (10270): Verilog HDL Case Statement warning at bcd.v(15): incomplete case statement has no default case item File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at bcd.v(14): inferring latch(es) for variable "hmmm", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+Info (10041): Inferred latch for "hmmm[0]" at bcd.v(14) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+Info (10041): Inferred latch for "hmmm[1]" at bcd.v(14) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+Info (10041): Inferred latch for "hmmm[2]" at bcd.v(14) File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+Warning (12020): Port "in" on the entity instantiation of "digit2" is connected to a signal of width 7. The formal width of the signal in the module is 4.  The extra bits will be ignored. File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 107
+Warning (12020): Port "in" on the entity instantiation of "digit1" is connected to a signal of width 7. The formal width of the signal in the module is 4.  The extra bits will be ignored. File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 106
+Warning (12020): Port "in" on the entity instantiation of "digit2" is connected to a signal of width 7. The formal width of the signal in the module is 4.  The extra bits will be ignored. File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 107
+Warning (12020): Port "in" on the entity instantiation of "digit1" is connected to a signal of width 7. The formal width of the signal in the module is 4.  The extra bits will be ignored. File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 106
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch two_digit_bcd_v2:ms_bcd|bcd:digit2|hmmm[0] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ms_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:ms_bcd|bcd:digit2|hmmm[1] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ms_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:ms_bcd|bcd:digit2|hmmm[2] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ms_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:ms_bcd|bcd:digit1|hmmm[0] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ms_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:ms_bcd|bcd:digit1|hmmm[1] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ms_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:ms_bcd|bcd:digit1|hmmm[2] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ms_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:sec_bcd|bcd:digit2|hmmm[0] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sec_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:sec_bcd|bcd:digit2|hmmm[1] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sec_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:sec_bcd|bcd:digit2|hmmm[2] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sec_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:sec_bcd|bcd:digit1|hmmm[0] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sec_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:sec_bcd|bcd:digit1|hmmm[1] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sec_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:sec_bcd|bcd:digit1|hmmm[2] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sec_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:min_bcd|bcd:digit2|hmmm[0] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal min_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:min_bcd|bcd:digit2|hmmm[1] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal min_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:min_bcd|bcd:digit2|hmmm[2] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal min_counter[1] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:min_bcd|bcd:digit1|hmmm[0] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal min_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:min_bcd|bcd:digit1|hmmm[1] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal min_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Warning (13012): Latch two_digit_bcd_v2:min_bcd|bcd:digit1|hmmm[2] has unsafe behavior File: C:/intelFPGA_lite/ECE2072/Lab4/bcd.v Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal min_counter[6] File: C:/intelFPGA_lite/ECE2072/Lab4/stopwatch.v Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 298 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 253 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Wed Sep 20 23:23:01 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:08
+
+

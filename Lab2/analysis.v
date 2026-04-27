@@ -1,0 +1,21 @@
+module analysis (in1, in2, out, clk);
+	input [3:0] in1, in2;
+	output reg [7:0] out;
+	input clk;
+
+	reg [3:0] clocked_in1, clocked_in2;
+	wire [7:0] clocked_out;
+	
+	always @(posedge clk) begin
+		clocked_in1 <= in1;
+		clocked_in2	<= in2;
+		out <= clocked_out;
+	end
+	
+//  MAC_DSP mac (.clock0(clk), .dataa(clocked_in1), .datab(clocked_in2), .result(clocked_out));
+
+//  MAC_LOGIC mac (.clock0(clk), .dataa(clocked_in1), .datab(clocked_in2), .result(clocked_out));
+
+  wallace_tree mul (.A(clocked_in1), .B(clocked_in2), .output_products(clocked_out));
+
+endmodule

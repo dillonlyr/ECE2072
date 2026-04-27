@@ -1,0 +1,81 @@
+module lab2_task3 (/* add I/O here*/);
+    // add I/O here
+
+    // Add modules here
+
+endmodule
+
+
+module two_digit_bcd (in, hex0, hex1);
+    input [3:0] in;
+    output [6:0] hex0;
+    output [6:0] hex1;
+
+    // Your code goes here
+
+endmodule
+
+module full_adder (a, b, cin, sum, cout);
+	input a, b, cin;
+	output sum, cout;
+	
+	assign sum = a ^ b ^ cin;
+	assign cout = (a & b) | (cin & (a ^ b));
+endmodule
+
+module ripple_carry_adder (a, b, cin, sum, out); 
+    input [3:0] a;
+    input [3:0] b;
+    output [3:0] sum;
+    input cin;
+    output cout;
+
+    // Insert your code here
+    // Example of instantiating 1 full adder
+    full_adder adder1(
+		.a(/*first input*/),
+		.b(/*second input*/),
+		.cin(/*carry input*/), 
+		.sum(/*output*/), 
+		.cout(/*carry output*/)
+	);
+
+endmodule
+
+
+// `timescale 1ns / 1ps
+// module adder_testbench;
+// 	initial begin
+//         // ???
+// 	end
+
+// 	always begin
+// 		# // ???
+		
+// 	end
+
+// 	always begin
+// 		# // ???
+// 	end
+
+// 	integer count, errors;
+// 	initial begin
+// 		count = 0;
+// 		errors = 0;
+// 	end
+	
+// 	always begin
+// 		# ???
+// 		if (count == /* ??? */) begin
+// 			$display("Done with test.");
+//           $display("There were %0d errors.", errors);
+// 			$stop;
+// 		end
+// 		if (/* ??? */) begin
+// 			$display("Error for input (%b, %b) at time %0t.", input1, input2, $time);
+// 			errors = errors + 1;
+// 		end
+// 		# ???
+// 		count = count + 1;
+// 	end
+// endmodule

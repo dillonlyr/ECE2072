@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/dillo/Downloads/lab\ 2/lab\ 2/lab2_task1 {C:/Users/dillo/Downloads/lab 2/lab 2/lab2_task1/ones_counter.v}
+vlog -vlog01compat -work work +incdir+C:/Users/dillo/Downloads/ones_counting_testbench {C:/Users/dillo/Downloads/ones_counting_testbench/ones_counting_testbench.v}
+

@@ -1,0 +1,62 @@
+`timescale 1ns/1ns
+/*
+Monash University ECE2072: Assignment 
+This file contains a Verilog test bench to test the correctness of the individual 
+    components used in the processor.
+	 
+Please enter your name and student ID:
+Student Name:   Loo Yi Ren Dillon
+Student ID  :   33455953
+*/
+
+module tick_FSM_tb;
+
+    // TODO: Implement the logic of your testbench here
+    // Add your code here to create I/O variables
+	reg [8:0] in;
+	wire [15:0] out;
+	
+	// Instantiate the module that your are testing
+	sign_extend test1(in, out);
+	
+	initial begin
+		// Add your code here
+		in = 0;
+	end
+	
+	always begin
+		#10
+		// increment your input variables
+		in = in + 1;
+	end
+	
+	// create and initialize your testbench statistics
+	integer count, errors;
+	
+	initial begin
+		// Add your code here
+		count = 0;
+		errors = 0;
+	end
+	
+	always begin
+		#9
+		if (count == 512) begin
+			#10 /* Display that the code is finished, and state how many errors occured*/;
+			$display("Done with test.");
+			$display("There were %0d errors.", errors);
+			// Stop the test bench
+			$stop;
+		end
+		
+		if (in[8] != out[15] || in[8] != out[14] || in[8] != out[13] || in[8] != out[12] || in[8] != out[11] || in[8] != out[11] ||
+		in[8] != out[10] || in[8] != out[9])
+		    errors = errors + 1;
+		
+		#1
+		// increment the test case count
+		count = count + 1;
+	end
+    
+
+endmodule

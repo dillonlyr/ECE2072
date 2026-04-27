@@ -1,0 +1,167 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/ECE2072/Assignment/simulation/modelsim
+vALU
+Z1 !s110 1697645258
+!i10b 1
+!s100 >;EUdJFUD;PZm5OzdTWi91
+I]]6CNo8XC4BchR_a=EiW03
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1697563631
+Z4 8C:/intelFPGA_lite/ECE2072/Assignment/components.v
+Z5 FC:/intelFPGA_lite/ECE2072/Assignment/components.v
+L0 134
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1697645258.000000
+Z8 !s107 C:/intelFPGA_lite/ECE2072/Assignment/components.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/ECE2072/Assignment|C:/intelFPGA_lite/ECE2072/Assignment/components.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/ECE2072/Assignment
+Z12 tCvgOpt 0
+n@a@l@u
+vALU_tb
+R1
+!i10b 1
+!s100 2oVf?A_W0a`faYmz3dN_>0
+IngONM6D9AiCT`Pob^>WRG3
+R2
+R0
+w1697461817
+8C:/intelFPGA_lite/ECE2072/Assignment/ALU_tb.v
+FC:/intelFPGA_lite/ECE2072/Assignment/ALU_tb.v
+L0 12
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/intelFPGA_lite/ECE2072/Assignment/ALU_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/ECE2072/Assignment|C:/intelFPGA_lite/ECE2072/Assignment/ALU_tb.v|
+!i113 1
+R10
+R11
+R12
+n@a@l@u_tb
+vmult
+!s110 1697645259
+!i10b 1
+!s100 ?Sd8ObQbG32<iYb1V?kl93
+I38>lS_Po0Ngf`=miY0Yc03
+R2
+R0
+w1697439679
+8C:/intelFPGA_lite/ECE2072/Assignment/mult.v
+FC:/intelFPGA_lite/ECE2072/Assignment/mult.v
+L0 39
+R6
+r1
+!s85 0
+31
+!s108 1697645259.000000
+!s107 C:/intelFPGA_lite/ECE2072/Assignment/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/ECE2072/Assignment|C:/intelFPGA_lite/ECE2072/Assignment/mult.v|
+!i113 1
+R10
+R11
+R12
+vmultiplexer
+R1
+!i10b 1
+!s100 E8ihlX>g?HlL;hFRToZQg0
+I<>>:5f;`;S2:84ehlO:Rm0
+R2
+R0
+R3
+R4
+R5
+L0 91
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vregister_n
+R1
+!i10b 1
+!s100 9L`5V4ZSLKb93`2eK6=>L1
+IaVeJTVNcIUd@XnR2zCdDY2
+R2
+R0
+R3
+R4
+R5
+L0 261
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vsign_extend
+R1
+!i10b 1
+!s100 Sga6gC;DOoQ1N6nNg<mbG0
+ImYiFSPz3i[1U>_cT>_AMN2
+R2
+R0
+R3
+R4
+R5
+L0 11
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vtick_FSM
+R1
+!i10b 1
+!s100 1=<VQN[Fn`0<bnmfa61G:1
+IR^OM8PBY;LSYZ3dnZlV=:1
+R2
+R0
+R3
+R4
+R5
+L0 40
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+ntick_@f@s@m

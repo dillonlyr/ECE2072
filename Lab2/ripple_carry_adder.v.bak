@@ -1,0 +1,18 @@
+module ripple_carry_adder (a, b, cin, sum, cout); 
+
+	input [3:0] a;
+	input [3:0] b;
+	output [3:0] sum;
+	input cin;
+	output cout;
+
+	// Insert your code here
+	// Example of instantiating 1 full adder
+		  full_adder adder1(.a(/*first input*/),
+	.b(/*second input*/),
+	.cin(/*carry input*/), 
+	.sum(/*output*/), 
+	.cout(/*carry output*/)
+	);
+	
+endmodule

@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/ECE2072/Assignment {C:/intelFPGA_lite/ECE2072/Assignment/components.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/ECE2072/Assignment {C:/intelFPGA_lite/ECE2072/Assignment/ALU_tb.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/ECE2072/Assignment {C:/intelFPGA_lite/ECE2072/Assignment/mult.v}
+

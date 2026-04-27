@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at proc_extension.v(454): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/ECE2072/Assignment/proc_extension.v Line: 454

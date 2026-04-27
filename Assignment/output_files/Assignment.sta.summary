@@ -1,0 +1,257 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -99.540
+TNS   : -1022.624
+
+Type  : Slow 1200mV 85C Model Setup 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -99.161
+TNS   : -944.512
+
+Type  : Slow 1200mV 85C Model Setup 'extended_proc:testproc|alu_op[0]'
+Slack : -13.673
+TNS   : -212.371
+
+Type  : Slow 1200mV 85C Model Setup 'extended_proc:testproc|bus_control[1]'
+Slack : -11.883
+TNS   : -163.910
+
+Type  : Slow 1200mV 85C Model Setup 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -6.879
+TNS   : -133.953
+
+Type  : Slow 1200mV 85C Model Setup 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -6.063
+TNS   : -106.780
+
+Type  : Slow 1200mV 85C Model Setup 'KEY[0]'
+Slack : -4.177
+TNS   : -747.796
+
+Type  : Slow 1200mV 85C Model Hold 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -102.058
+TNS   : -790.860
+
+Type  : Slow 1200mV 85C Model Hold 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -100.650
+TNS   : -773.604
+
+Type  : Slow 1200mV 85C Model Hold 'extended_proc:testproc|alu_op[0]'
+Slack : -2.381
+TNS   : -2.796
+
+Type  : Slow 1200mV 85C Model Hold 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -2.183
+TNS   : -4.240
+
+Type  : Slow 1200mV 85C Model Hold 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -1.919
+TNS   : -5.967
+
+Type  : Slow 1200mV 85C Model Hold 'KEY[0]'
+Slack : -0.919
+TNS   : -2.401
+
+Type  : Slow 1200mV 85C Model Hold 'extended_proc:testproc|bus_control[1]'
+Slack : 0.128
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -97.131
+TNS   : -421482.733
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -96.422
+TNS   : -421559.003
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.166
+TNS   : -369.479
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -0.780
+TNS   : -18.249
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -0.066
+TNS   : -0.451
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extended_proc:testproc|bus_control[1]'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'extended_proc:testproc|alu_op[0]'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -90.393
+TNS   : -932.089
+
+Type  : Slow 1200mV 0C Model Setup 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -90.087
+TNS   : -860.937
+
+Type  : Slow 1200mV 0C Model Setup 'extended_proc:testproc|alu_op[0]'
+Slack : -12.475
+TNS   : -194.993
+
+Type  : Slow 1200mV 0C Model Setup 'extended_proc:testproc|bus_control[1]'
+Slack : -10.943
+TNS   : -150.115
+
+Type  : Slow 1200mV 0C Model Setup 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -6.462
+TNS   : -124.209
+
+Type  : Slow 1200mV 0C Model Setup 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -5.693
+TNS   : -98.990
+
+Type  : Slow 1200mV 0C Model Setup 'KEY[0]'
+Slack : -3.797
+TNS   : -676.653
+
+Type  : Slow 1200mV 0C Model Hold 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -92.614
+TNS   : -719.046
+
+Type  : Slow 1200mV 0C Model Hold 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -91.335
+TNS   : -703.338
+
+Type  : Slow 1200mV 0C Model Hold 'extended_proc:testproc|alu_op[0]'
+Slack : -2.154
+TNS   : -2.535
+
+Type  : Slow 1200mV 0C Model Hold 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -1.950
+TNS   : -3.670
+
+Type  : Slow 1200mV 0C Model Hold 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -1.755
+TNS   : -5.133
+
+Type  : Slow 1200mV 0C Model Hold 'KEY[0]'
+Slack : -0.914
+TNS   : -2.482
+
+Type  : Slow 1200mV 0C Model Hold 'extended_proc:testproc|bus_control[1]'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -88.158
+TNS   : -382629.559
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -87.429
+TNS   : -382500.884
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.166
+TNS   : -369.479
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -0.726
+TNS   : -15.502
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -0.066
+TNS   : -0.420
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|bus_control[1]'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|alu_op[0]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -40.354
+TNS   : -391.542
+
+Type  : Fast 1200mV 0C Model Setup 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -40.347
+TNS   : -425.128
+
+Type  : Fast 1200mV 0C Model Setup 'extended_proc:testproc|alu_op[0]'
+Slack : -5.626
+TNS   : -87.882
+
+Type  : Fast 1200mV 0C Model Setup 'extended_proc:testproc|bus_control[1]'
+Slack : -5.148
+TNS   : -69.414
+
+Type  : Fast 1200mV 0C Model Setup 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -3.069
+TNS   : -58.117
+
+Type  : Fast 1200mV 0C Model Setup 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -2.783
+TNS   : -44.148
+
+Type  : Fast 1200mV 0C Model Setup 'KEY[0]'
+Slack : -1.304
+TNS   : -199.227
+
+Type  : Fast 1200mV 0C Model Hold 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -41.856
+TNS   : -322.799
+
+Type  : Fast 1200mV 0C Model Hold 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -41.324
+TNS   : -316.055
+
+Type  : Fast 1200mV 0C Model Hold 'extended_proc:testproc|alu_op[0]'
+Slack : -1.262
+TNS   : -1.668
+
+Type  : Fast 1200mV 0C Model Hold 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -1.093
+TNS   : -2.730
+
+Type  : Fast 1200mV 0C Model Hold 'KEY[0]'
+Slack : -0.809
+TNS   : -2.572
+
+Type  : Fast 1200mV 0C Model Hold 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -0.796
+TNS   : -2.144
+
+Type  : Fast 1200mV 0C Model Hold 'extended_proc:testproc|bus_control[1]'
+Slack : -0.284
+TNS   : -0.284
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|register_n:reg_H|Q[0]'
+Slack : -39.287
+TNS   : -168778.041
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|register_n:reg_H|Q[15]'
+Slack : -39.178
+TNS   : -168429.106
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -286.144
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|tick_FSM:tick_counter|tick[0]'
+Slack : -0.010
+TNS   : -0.028
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|tick_FSM:tick_counter|tick[1]'
+Slack : -0.006
+TNS   : -0.006
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|alu_op[0]'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'extended_proc:testproc|bus_control[1]'
+Slack : 0.446
+TNS   : 0.000
+
+------------------------------------------------------------
